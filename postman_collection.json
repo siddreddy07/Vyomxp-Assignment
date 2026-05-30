@@ -1,0 +1,69 @@
+{
+	"info": {
+		"name": "Vyom-Exo API",
+		"description": "API for Vyom-Exo Discord bot — user auth and service management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"url": {
+					"raw": "{{base_url}}/api/auth/signup",
+					"host": ["{{base_url}}"],
+					"path": ["api", "auth", "signup"]
+				},
+				"header": [
+					{ "key": "Content-Type", "value": "application/json" }
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"testuser\",\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}"
+				}
+			}
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"url": {
+					"raw": "{{base_url}}/api/auth/login",
+					"host": ["{{base_url}}"],
+					"path": ["api", "auth", "login"]
+				},
+				"header": [
+					{ "key": "Content-Type", "value": "application/json" }
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"password123\"\n}"
+				}
+			}
+		},
+		{
+			"name": "Get Profile",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "{{base_url}}/api/user/me",
+					"host": ["{{base_url}}"],
+					"path": ["api", "user", "me"]
+				},
+				"header": [
+					{ "key": "Authorization", "value": "Bearer {{token}}" }
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080"
+		},
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}
