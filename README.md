@@ -19,7 +19,7 @@ A Discord bot + Express API server for managing users and their services.
 1. Clone the repo
 2. Copy `.env.example` to `.env` and fill in your values
 3. Run `npm install`
-4. Run `npm run register` to register global slash commands
+4. Run `npm run register` to register global slash commands (If only You want to add new slash commands).
 5. Run `npm start`
 
 ### Required Environment Variables (`.env`)
