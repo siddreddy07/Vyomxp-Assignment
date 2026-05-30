@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
 import { User } from '../../models/index.js';
-import { getUserWithServices } from '../../services/userService.js';
+import { getUserWithServices } from '../../services/user.Service.js';
 
 export const data = new SlashCommandBuilder()
   .setName('ppgetuser')

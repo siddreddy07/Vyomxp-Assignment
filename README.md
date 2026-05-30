@@ -82,19 +82,19 @@ src/
 │   └── database.js                 # Sequelize config
 ├── models/
 │   ├── index.js                    # Model barrel + associations
-│   ├── User.js                     # User model
-│   └── Service.js                  # Service model
+│   ├── User.model.js               # User model
+│   └── Service.model.js            # Service model
 ├── middleware/
 │   └── auth.js                     # JWT verification middleware
 ├── routes/
-│   ├── authRoutes.js               # signup / login routes
-│   └── userRoutes.js               # /me route (protected)
+│   ├── auth.Routes.js              # signup / login routes
+│   └── user.Routes.js              # /me route (protected)
 ├── controllers/
-│   ├── authController.js           # Auth request handlers
-│   └── userController.js           # User request handlers
+│   ├── auth.controller.js          # Auth request handlers
+│   └── user.controller.js          # User request handlers
 ├── services/
-│   ├── authService.js              # Signup/login business logic
-│   └── userService.js              # User+services lookup
+│   ├── auth.Service.js             # Signup/login business logic
+│   └── user.Service.js             # User+services lookup
 ├── handlers/
 │   └── commandHandler.js           # Discord interaction handler
 └── commands/utility/

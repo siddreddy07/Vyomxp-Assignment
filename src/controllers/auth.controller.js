@@ -1,4 +1,4 @@
-import { signup as signupService, login as loginService } from '../services/authService.js';
+import { signup as signupService, login as loginService } from '../services/auth.Service.js';
 
 export async function signup(req, res) {
   try {
@@ -35,7 +35,7 @@ export async function login(req, res) {
 
     const result = await loginService({ username, password });
 
-    res.json({
+    res.status(200).json({
       message: 'Login successful',
       user: result.user,   
       token: result.token,

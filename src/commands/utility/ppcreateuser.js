@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from 'discord.js';
-import { signup } from '../../services/authService.js';
+import { signup } from '../../services/auth.Service.js';
 
 export const data = new SlashCommandBuilder()
   .setName('ppcreateuser')
