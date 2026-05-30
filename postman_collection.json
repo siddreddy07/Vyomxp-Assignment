@@ -1,69 +1,99 @@
 {
-	"info": {
-		"name": "Vyom-Exo API",
-		"description": "API for Vyom-Exo Discord bot — user auth and service management",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "Signup",
-			"request": {
-				"method": "POST",
-				"url": {
-					"raw": "{{base_url}}/api/auth/signup",
-					"host": ["{{base_url}}"],
-					"path": ["api", "auth", "signup"]
-				},
-				"header": [
-					{ "key": "Content-Type", "value": "application/json" }
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"username\": \"testuser\",\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}"
-				}
-			}
-		},
-		{
-			"name": "Login",
-			"request": {
-				"method": "POST",
-				"url": {
-					"raw": "{{base_url}}/api/auth/login",
-					"host": ["{{base_url}}"],
-					"path": ["api", "auth", "login"]
-				},
-				"header": [
-					{ "key": "Content-Type", "value": "application/json" }
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"password123\"\n}"
-				}
-			}
-		},
-		{
-			"name": "Get Profile",
-			"request": {
-				"method": "GET",
-				"url": {
-					"raw": "{{base_url}}/api/user/me",
-					"host": ["{{base_url}}"],
-					"path": ["api", "user", "me"]
-				},
-				"header": [
-					{ "key": "Authorization", "value": "Bearer {{token}}" }
-				]
-			}
-		}
-	],
-	"variable": [
-		{
-			"key": "base_url",
-			"value": "http://localhost:8080"
-		},
-		{
-			"key": "token",
-			"value": ""
-		}
-	]
+  "info": {
+    "name": "VyomXp_Backend_Assignment",
+    "description": null,
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Signup-User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/api/auth/signup",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "signup"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"siddharth\",\n  \"email\": \"siddharth@email.com\",\n  \"password\": \"pass123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Login_User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": " http://localhost:8080/api/auth/login",
+          "protocol": " http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Me",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJzaWRkaGFydGgiLCJpYXQiOjE3ODAxMjE2MzUsImV4cCI6MTc4MDcyNjQzNX0.N68zoxdaKpmp_Xod91tCkAMFIbTmdzTecpKAGLMjviA",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/api/user/me",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "user",
+            "me"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    }
+  ],
+  "variable": []
 }
